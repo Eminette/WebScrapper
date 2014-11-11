@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScraper", "WebScraper\WebScraper.csproj", "{CA2D296E-DAFF-47BD-B620-ABECDAD7C965}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScraper.Tests", "..\GoogleSearchScraper\GoogleSearchScraper.Tests\WebScraper.Tests.csproj", "{E867A8DB-80BB-4E16-BFE9-2A8E622A025F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScraper.Tests", "..\WebScraper\WebScraper.Tests\WebScraper.Tests.csproj", "{E867A8DB-80BB-4E16-BFE9-2A8E622A025F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9FAB93A4-DACA-4E63-8F6B-E53FFEFF20B2}"
 	ProjectSection(SolutionItems) = preProject
