@@ -1,0 +1,34 @@
+﻿@model WebScraper.Models.SearchViewModel
+@{
+    ViewBag.Title = "Google ranking checker";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div id="search">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)
+        <div>
+            <label for="Url">Which Url are you looking for?</label>
+            @Html.TextBoxFor(model => model.Url, new { @class = "search", title = "e.g. 'www.infotrack.com.au'" })
+            @Html.ValidationMessageFor(model=> model.Url)
+        </div>
+        <div>
+            <label for="Url">Please enter your google search keyword(s)</label>
+            @Html.TextBoxFor(model => model.Keywords, new { @class = "search", title = "e.g. 'online title search'" })
+            @Html.ValidationMessageFor(model=> model.Keywords)
+        </div>
+        <div class="buttonRow">
+            <input type="submit" value="Search" class="submitButton" />
+        </div>
+    }
+    @if (ViewBag.Results != null)
+    {
+        <div id="successMessage">@ViewBag.Results</div>
+    }
+    else if (TempData["ErrorMessage"] != null)
+    {
+         <div id="errorMessage">@TempData["ErrorMessage"]</div>
+    }
+</div>
